@@ -4,9 +4,9 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Introduction | ARM Assembly Examples/Storage</title>
+        <title>Introduction | Nintendo 3DS ARM Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Mainly because I&#39;m a forgetful twat, so I figured I&#39;d toss stuff I use in 3DS testing here for easier reference.">
+        <meta name="description" content="This &#39;book&#39; will mainly detail the ARM hardware on the 3DS. It will also include examples for certain operations.">
         <meta name="generator" content="GitBook 1.0.3">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,7 +18,7 @@
     
     
     
-    <link rel="next" href="./vfp/README.html" />
+    <link rel="next" href="./terminology.html" />
     
     
 
@@ -31,7 +31,7 @@
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1430560966512">
+    <div class="book"  data-level="0" data-basepath="." data-revision="1430664858539">
     
 
 <div class="book-summary">
@@ -59,6 +59,120 @@
                     </a>
                 
             
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="terminology.html">
+            
+                
+                    <a href="./terminology.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         Terminology
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2" data-path="about_the_3ds.html">
+            
+                
+                    <a href="./about_the_3ds.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                         About the 3DS CPU(s)
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.2.1" data-path="registers.html">
+            
+                
+                    <a href="./registers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.1.</b>
+                        
+                         Core Registers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2.2" data-path="privilege_modes.html">
+            
+                
+                    <a href="./privilege_modes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.2.</b>
+                        
+                         Privilege Modes
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="0.2.3" data-path="the_apsr,_cpsr,_and_the_difference_between_them.html">
+            
+                
+                    <a href="./the_apsr,_cpsr,_and_the_difference_between_them.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.3.</b>
+                        
+                         The APSR, CPSR, SPSR, and the Difference Between Them
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.2.3.1" data-path="apsr_and_cpsr_flags.html">
+            
+                
+                    <a href="./apsr_and_cpsr_flags.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.3.1.</b>
+                        
+                         APSR and CPSR Flags
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -117,6 +231,8 @@
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <a href="./GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
     
     <div id="font-settings-wrapper" class="dropdown pull-left">
         <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
@@ -181,7 +297,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >ARM Assembly Examples/Storage</a>
+        <a href="./" >Nintendo 3DS ARM Documentation</a>
     </h1>
 </div>
 
@@ -189,11 +305,12 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_798">
+                    <section class="normal" id="section-gitbook_87">
                     
-                        <h1 id="arm-assembly-examplesstorage">ARM Assembly Examples/Storage</h1>
-<p>Mainly because I&#39;m a forgetful twat, so I figured I&#39;d toss stuff I use in 3DS testing here for easier reference.</p>
-<p>Note that this isn&#39;t supposed to be whizbang 11/10 performance assembly. It&#39;s testing code.</p>
+                        <h1 id="nintendo-3ds-arm-documentation">Nintendo 3DS ARM Documentation</h1>
+<p>This &#39;book&#39; will mainly detail the ARM hardware on the 3DS. It will also include examples for certain operations.</p>
+<p>Primarily this will act like a small overview for quickly checking information on 3DS-specific ARM stuff.</p>
+<p>Secondarily, I made this because I&#39;m a forgetful twat, so now I don&#39;t have an excuse.</p>
 
                     
                     </section>
@@ -205,7 +322,7 @@
 
         
         
-        <a href="./vfp/README.html" class="navigation navigation-next navigation-unique" aria-label="Next page: VFP"><i class="fa fa-angle-right"></i></a>
+        <a href="./terminology.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Terminology"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
