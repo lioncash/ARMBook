@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="0.1" data-basepath="." data-revision="1430664858539">
+    <div class="book"  data-level="0.1" data-basepath="." data-revision="1431036296996">
     
 
 <div class="book-summary">
@@ -307,65 +307,57 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_91">
+                    <section class="normal" id="section-gitbook_365">
                     
                         <h1 id="terminology">Terminology</h1>
-<p>This contains terminology that is commonly used when relating to ARM internals. I&#39;ve provided it here for easier reading of this book.</p>
+<p>This page details terminology that is commonly used when relating to ARM CPU internals.</p>
 <ul>
-<li><p>RAO</p>
+<li><p>RAO – Read-As-One</p>
 <ul>
-<li>Read-As-One</li>
 <li>Hardware must implement the field as reading as all 1s.</li>
 <li>Software can rely on the field reading as all 1s.</li>
 <li>This description can apply to a single bit that reads as 1, or to a field that reads as all 1s.</li>
 </ul>
 </li>
-<li><p>RAO/SBOP</p>
+<li><p>RAO/SBOP – Read-As-One, Should-Be-One-or-Preserved on writes</p>
 <ul>
-<li>Read-As-One, Should-Be-One-or-Preserved on writes</li>
 <li>Hardware must implement the field as Read-as-One, and must ignore writes to the field.</li>
 <li>Software can rely on the field reading as all 1s, but must use an SBOP policy to write to the field.</li>
 <li>This description can apply to a single bit that reads as 1, or to a field that reads as all 1s.</li>
 </ul>
 </li>
-<li><p>RAO/WI</p>
+<li><p>RAO/WI – Read-As-One, Writes Ignored</p>
 <ul>
-<li>Read-As-One, Writes Ignored</li>
 <li>Hardware must implement the field as read as Read-as-One, and must ignore writes to the field.</li>
 <li>Software can rely on the field reading as all 1s, and on writes being ignored.</li>
 <li>This description can apply to a single bit that reads as 1, or to a field that reads as all 1s.</li>
 </ul>
 </li>
-<li><p>RAZ</p>
+<li><p>RAZ – Read-As-Zero</p>
 <ul>
-<li>Read-As-Zero</li>
 <li>Same as RAO, but with 0s instead of 1s.</li>
 </ul>
 </li>
-<li><p>RAZ/SBZP</p>
+<li><p>RAZ/SBZP – Read-As-Zero, Should-Be-Zero-or-Preserved on writes</p>
 <ul>
-<li>Read-As-Zero, Should-Be-Zero-or-Preserved on writes.</li>
 <li>Same as RAO/SBOP, but with 0s instead of 1s.</li>
 </ul>
 </li>
-<li><p>RAZ/WI</p>
+<li><p>RAZ/WI – Read-As-Zero, Writes Ignored</p>
 <ul>
-<li>Read-As-Zero, Writes Ignored</li>
 <li>Same as RAO/WI, but with 0s instead of 1s.</li>
 </ul>
 </li>
-<li><p>SBO</p>
+<li><p>SBO – Should-Be-One</p>
 <ul>
-<li>Should-Be-One</li>
 <li>Hardware must ignore writes to the field.</li>
 <li>Software should write the field as all 1s. If software writes a value that is not all 1s, it must expect an
 UNPREDICTABLE result.</li>
 <li>This description can apply to a single bit that should be written as 1, or to a field that should be written as all 1s.</li>
 </ul>
 </li>
-<li><p>SBOP</p>
+<li><p>SBOP – Should-Be-One-or-Preserved</p>
 <ul>
-<li>Should-Be-One-or-Preserved</li>
 <li>Hardware must ignore writes to the field.</li>
 <li>If software has read the field since the processor implementing the field was last reset and initialized, it should
 preserve the value of the field by writing the value that it previously read from the field. Otherwise, it should write
@@ -376,17 +368,15 @@ an UNPREDICTABLE result.</li>
 be written as its preserved value or as all 1s.</li>
 </ul>
 </li>
-<li><p>SBZ</p>
+<li><p>SBZ – Should-Be-Zero</p>
 <ul>
-<li>Should-be-Zero</li>
 <li>Hardware must ignore writes to the field.</li>
 <li>Software should write the field as all zeroes, otherwise it&#39;s considered unpredictable.</li>
 <li>Applies to a single bit, or a bit field that should be all zeroes.</li>
 </ul>
 </li>
-<li><p>SBZP</p>
+<li><p>SBZP – Should-Be-Zero-or-Preserved on writes.</p>
 <ul>
-<li>Should-Be-Zero-or-Preserved on writes.</li>
 <li>Same as SBOP, but with 0s instead of 1s.</li>
 </ul>
 </li>
