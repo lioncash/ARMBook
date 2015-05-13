@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>APSR and CPSR Flags | Nintendo 3DS ARM Documentation</title>
+        <title>FPSCR | Nintendo 3DS ARM Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -12,16 +12,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
     
-    <link rel="next" href="./vfp/README.html" />
+    <link rel="next" href="../vfp/enabling_flush-to-zero_mode.html" />
     
     
-    <link rel="prev" href="./the_apsr,_cpsr,_and_the_difference_between_them.html" />
+    <link rel="prev" href="../vfp/fpsid.html" />
     
 
         
@@ -29,11 +29,11 @@
     <body>
         
         
-<link rel="stylesheet" href="gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/style.css">
 
 
         
-    <div class="book"  data-level="1.3.1" data-basepath="." data-revision="1431526982333">
+    <div class="book"  data-level="2.1.1.2" data-basepath=".." data-revision="1431526982333">
     
 
 <div class="book-summary">
@@ -54,7 +54,7 @@
         <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                          Introduction
@@ -69,7 +69,7 @@
         <li class="chapter " data-level="0.1" data-path="terminology.html">
             
                 
-                    <a href="./terminology.html">
+                    <a href="../terminology.html">
                         <i class="fa fa-check"></i>
                         
                             <b>0.1.</b>
@@ -90,7 +90,7 @@
         <li class="chapter " data-level="1" data-path="about_the_3ds.html">
             
                 
-                    <a href="./about_the_3ds.html">
+                    <a href="../about_the_3ds.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -107,7 +107,7 @@
         <li class="chapter " data-level="1.1" data-path="registers.html">
             
                 
-                    <a href="./registers.html">
+                    <a href="../registers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -123,7 +123,7 @@
         <li class="chapter " data-level="1.2" data-path="privilege_modes.html">
             
                 
-                    <a href="./privilege_modes.html">
+                    <a href="../privilege_modes.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -139,7 +139,7 @@
         <li class="chapter " data-level="1.3" data-path="the_apsr,_cpsr,_and_the_difference_between_them.html">
             
                 
-                    <a href="./the_apsr,_cpsr,_and_the_difference_between_them.html">
+                    <a href="../the_apsr,_cpsr,_and_the_difference_between_them.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.</b>
@@ -153,10 +153,10 @@
                 
     
         
-        <li class="chapter active" data-level="1.3.1" data-path="apsr_and_cpsr_flags.html">
+        <li class="chapter " data-level="1.3.1" data-path="apsr_and_cpsr_flags.html">
             
                 
-                    <a href="./apsr_and_cpsr_flags.html">
+                    <a href="../apsr_and_cpsr_flags.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.1.</b>
@@ -182,7 +182,7 @@
         <li class="chapter " data-level="2" data-path="vfp/README.html">
             
                 
-                    <a href="./vfp/README.html">
+                    <a href="../vfp/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.</b>
@@ -199,7 +199,7 @@
         <li class="chapter " data-level="2.1" data-path="vfp/vfp_registers.html">
             
                 
-                    <a href="./vfp/vfp_registers.html">
+                    <a href="../vfp/vfp_registers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.</b>
@@ -216,7 +216,7 @@
         <li class="chapter " data-level="2.1.1" data-path="vfp/vfp_system_registers.html">
             
                 
-                    <a href="./vfp/vfp_system_registers.html">
+                    <a href="../vfp/vfp_system_registers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.1.</b>
@@ -233,7 +233,7 @@
         <li class="chapter " data-level="2.1.1.1" data-path="vfp/fpsid.html">
             
                 
-                    <a href="./vfp/fpsid.html">
+                    <a href="../vfp/fpsid.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.1.1.</b>
@@ -246,10 +246,10 @@
         </li>
     
         
-        <li class="chapter " data-level="2.1.1.2" data-path="vfp/fpscr.html">
+        <li class="chapter active" data-level="2.1.1.2" data-path="vfp/fpscr.html">
             
                 
-                    <a href="./vfp/fpscr.html">
+                    <a href="../vfp/fpscr.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.1.1.2.</b>
@@ -275,7 +275,7 @@
         <li class="chapter " data-level="2.2" data-path="vfp/enabling_flush-to-zero_mode.html">
             
                 
-                    <a href="./vfp/enabling_flush-to-zero_mode.html">
+                    <a href="../vfp/enabling_flush-to-zero_mode.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.2.</b>
@@ -291,7 +291,7 @@
         <li class="chapter " data-level="2.3" data-path="vfp/default_nan.html">
             
                 
-                    <a href="./vfp/default_nan.html">
+                    <a href="../vfp/default_nan.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.3.</b>
@@ -326,7 +326,7 @@
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     
-    <a href="./GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
     
     <div id="font-settings-wrapper" class="dropdown pull-left">
         <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
@@ -391,7 +391,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Nintendo 3DS ARM Documentation</a>
+        <a href="../" >Nintendo 3DS ARM Documentation</a>
     </h1>
 </div>
 
@@ -399,117 +399,213 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_273">
+                    <section class="normal" id="section-gitbook_285">
                     
-                        <h1 id="apsr-and-cpsr-flags">APSR and CPSR Flags</h1>
-<p>The CPSR (which contains the APSR):</p>
+                        <h1 id="fpscr---floating-point-status-and-control-register">FPSCR - Floating-Point Status and Control Register</h1>
+<ul>
+<li>Read/write register</li>
+<li>Accessible in privileged and unprivileged modes.</li>
+<li>Contains VFP status and control bits.</li>
+</ul>
+<p>Layout:</p>
 <table>
 <thead>
 <tr>
-<th>31</th>
-<th>30</th>
-<th>29</th>
-<th>28</th>
-<th>27</th>
-<th style="text-align:center">26 - 25</th>
-<th>24</th>
-<th style="text-align:center">23 - 20</th>
-<th>19 - 16</th>
-<th style="text-align:center">15 - 10</th>
-<th>9</th>
-<th>8</th>
-<th>7</th>
-<th>6</th>
-<th>5</th>
-<th style="text-align:center">4 - 0</th>
+<th style="text-align:center">31</th>
+<th style="text-align:center">30</th>
+<th style="text-align:center">29</th>
+<th style="text-align:center">28</th>
+<th style="text-align:center">27 - 26</th>
+<th style="text-align:center">25</th>
+<th style="text-align:center">24</th>
+<th style="text-align:center">23 - 22</th>
+<th style="text-align:center">21 - 20</th>
+<th style="text-align:center">19</th>
+<th style="text-align:center">18 - 16</th>
+<th style="text-align:center">15</th>
+<th style="text-align:center">14 - 13</th>
+<th style="text-align:center">12</th>
+<th style="text-align:center">11</th>
+<th style="text-align:center">10</th>
+<th style="text-align:center">9</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">6 - 5</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Z</td>
+<td style="text-align:center">C</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">SBZ</td>
+<td style="text-align:center">DN</td>
+<td style="text-align:center">FZ</td>
+<td style="text-align:center">Rmode</td>
+<td style="text-align:center">Stride</td>
+<td style="text-align:center">SBZ</td>
+<td style="text-align:center">LEN</td>
+<td style="text-align:center">IDE</td>
+<td style="text-align:center">SBZ</td>
+<td style="text-align:center">IXE</td>
+<td style="text-align:center">UFE</td>
+<td style="text-align:center">OFE</td>
+<td style="text-align:center">DZE</td>
+<td style="text-align:center">IOE</td>
+<td style="text-align:center">IDC</td>
+<td style="text-align:center">SBZ</td>
+<td style="text-align:center">IXC</td>
+<td style="text-align:center">UFC</td>
+<td style="text-align:center">OFC</td>
+<td style="text-align:center">DZC</td>
+<td style="text-align:center">IOC</td>
+</tr>
+</tbody>
+</table>
+<p>Bitfields:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Bit(s)</th>
+<th>Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">31</td>
 <td>N</td>
+<td>Set if comparison produces a <em>less than</em> result</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
 <td>Z</td>
+<td>Set if comparison produces an <em>equal</em> result</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
 <td>C</td>
+<td>Set if comparison produces an <em>equal, greater than or unordered</em> result</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
 <td>V</td>
-<td>Q</td>
-<td style="text-align:center">RAZ</td>
-<td>J</td>
-<td style="text-align:center">Reserved/UNK/SBZP</td>
-<td>GE</td>
-<td style="text-align:center">RAZ</td>
-<td>E</td>
-<td>A</td>
-<td>I</td>
-<td>F</td>
-<td>T</td>
-<td style="text-align:center">M[4:0]</td>
+<td>Set if comparison produces an <em>unordered</em> result</td>
+</tr>
+<tr>
+<td style="text-align:center">27:26</td>
+<td>-</td>
+<td>Should Be Zero</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td>DN</td>
+<td>Default NaN mode enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td>FZ</td>
+<td>Flush-to-zero mode enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">23:22</td>
+<td>Rmode</td>
+<td>Rounding mode control field. See table below for possible values</td>
+</tr>
+<tr>
+<td style="text-align:center">21:20</td>
+<td>Stride</td>
+<td>Vector stride</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td>-</td>
+<td>Should Be Zero</td>
+</tr>
+<tr>
+<td style="text-align:center">18:16</td>
+<td>LEN</td>
+<td>Vector length</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td>IDE</td>
+<td>Input Subnormal exception enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">14:13</td>
+<td>-</td>
+<td>Should Be Zero</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td>IXE</td>
+<td>Inexact exception enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td>UFE</td>
+<td>Underflow exception enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td>OFE</td>
+<td>Overflow exception enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td>DZE</td>
+<td>Division by Zero exception enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td>IOE</td>
+<td>Invalid Operation exception enable bit</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td>IDC</td>
+<td>Input Subnormal cumulative flag</td>
+</tr>
+<tr>
+<td style="text-align:center">6:5</td>
+<td>-</td>
+<td>Should Be Zero</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td>IXC</td>
+<td>Inexact cumulative flag</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>UFC</td>
+<td>Underflow cumulative flag</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>OFC</td>
+<td>Overflow cumulative flag</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td>DZC</td>
+<td>Division by Zero cumulative flag</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td>IOC</td>
+<td>Invalid Operation cumulative flag</td>
 </tr>
 </tbody>
 </table>
-<p><br/></p>
-<table>
-<thead>
-<tr>
-<th>Flag</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>N (Negative)</td>
-<td>Set if the result of a data processing instruction was negative</td>
-</tr>
-<tr>
-<td>Z (Zero)</td>
-<td>Set if the result of an instruction operation is zero</td>
-</tr>
-<tr>
-<td>C (Carry)</td>
-<td>Set if the result of an unsigned operation overflows the 32-bit result register</td>
-</tr>
-<tr>
-<td>V (Overflow)</td>
-<td>Same as the carry flag, but for signed operations</td>
-</tr>
-<tr>
-<td>Q (Saturation)</td>
-<td>Set if saturation occurs during execution of a saturation instruction. This flag is sticky; it must be explicitly cleared by an MSR instruction.</td>
-</tr>
-<tr>
-<td>J (Jazelle)</td>
-<td>Set when the CPU is in Jazelle mode</td>
-</tr>
-<tr>
-<td>GE (Greater than or Equal)</td>
-<td>Used by the SEL instruction for byte selection</td>
-</tr>
-<tr>
-<td>E (Endian)</td>
-<td>Controls the endianness for load/store instructions. When cleared, load/store instructions operate in little-endian. When set, load/store instructions operate in big endian.</td>
-</tr>
-<tr>
-<td>A (Abort)</td>
-<td>Controls whether or not imprecise data aborts are disabled.</td>
-</tr>
-<tr>
-<td>I (IRQ)</td>
-<td>Controls whether or not IRQ interrupts are disabled.</td>
-</tr>
-<tr>
-<td>F (FIQ)</td>
-<td>Controls whether or not FIQ interrupts are disabled.</td>
-</tr>
-<tr>
-<td>T (Thumb)</td>
-<td>Indicates if the processor is in Thumb mode. If set, Thumb mode is active. If cleared, Thumb mode is not active.</td>
-</tr>
-<tr>
-<td>M (Mode)</td>
-<td>Indicates the current processor mode. See table below</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<p>This table shows what processor modes correspond to mode bit configurations.</p>
+<p>Rounding modes:</p>
 <table>
 <thead>
 <tr>
@@ -519,43 +615,23 @@
 </thead>
 <tbody>
 <tr>
-<td>10000</td>
-<td>User</td>
+<td>b00</td>
+<td>Round to nearest (RN) mode</td>
 </tr>
 <tr>
-<td>10001</td>
-<td>FIQ</td>
+<td>b01</td>
+<td>Round towards plus infinity (RP) mode</td>
 </tr>
 <tr>
-<td>10010</td>
-<td>IRQ</td>
+<td>b10</td>
+<td>Round towards minus infinity (RM) mode</td>
 </tr>
 <tr>
-<td>10011</td>
-<td>Supervisor</td>
-</tr>
-<tr>
-<td>10111</td>
-<td>Abort</td>
-</tr>
-<tr>
-<td>11011</td>
-<td>Undefined</td>
-</tr>
-<tr>
-<td>11111</td>
-<td>System</td>
+<td>b11</td>
+<td>Round towards zero (RZ) mode</td>
 </tr>
 </tbody>
 </table>
-<h3 id="notes">Notes</h3>
-<hr>
-<ul>
-<li>Despite the ARM11 MPCore in the 3DS having the Jazelle bit, the 3DS doesn&#39;t actually support Jazelle.<ul>
-<li><strong>However</strong>, it <em>does</em> support the instruction that attempts to enter Jazelle mode (BXJ). Attempts to use it will make it function like a BX instruction.</li>
-</ul>
-</li>
-</ul>
 
                     
                     </section>
@@ -566,23 +642,23 @@
         </div>
 
         
-        <a href="./the_apsr,_cpsr,_and_the_difference_between_them.html" class="navigation navigation-prev " aria-label="Previous page: The APSR, CPSR, SPSR, and the Difference Between Them"><i class="fa fa-angle-left"></i></a>
+        <a href="../vfp/fpsid.html" class="navigation navigation-prev " aria-label="Previous page: FPSID"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./vfp/README.html" class="navigation navigation-next " aria-label="Next page: VFP"><i class="fa fa-angle-right"></i></a>
+        <a href="../vfp/enabling_flush-to-zero_mode.html" class="navigation navigation-next " aria-label="Next page: Flush-To-Zero Mode"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
     
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>
