@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>APSR and CPSR Flags | Nintendo 3DS ARM Documentation</title>
+        <title>Tightly-coupled Memory Size Register | Nintendo 3DS ARM Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -12,16 +12,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
     
     
-    <link rel="next" href="./the_apsr,_cpsr,_and_the_difference_between_them.html" />
     
-    
-    <link rel="prev" href="./privilege_modes.html" />
+    <link rel="prev" href="../arm946e-s/cache_type_register.html" />
     
 
         
@@ -29,11 +27,11 @@
     <body>
         
         
-<link rel="stylesheet" href="gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/style.css">
 
 
         
-    <div class="book"  data-level="1.3" data-basepath="." data-revision="1431557304855">
+    <div class="book"  data-level="2.1.3" data-basepath=".." data-revision="1431559689026">
     
 
 <div class="book-summary">
@@ -54,7 +52,7 @@
         <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                          Introduction
@@ -69,7 +67,7 @@
         <li class="chapter " data-level="0.1" data-path="about_the_3ds.html">
             
                 
-                    <a href="./about_the_3ds.html">
+                    <a href="../about_the_3ds.html">
                         <i class="fa fa-check"></i>
                         
                             <b>0.1.</b>
@@ -85,7 +83,7 @@
         <li class="chapter " data-level="0.2" data-path="terminology.html">
             
                 
-                    <a href="./terminology.html">
+                    <a href="../terminology.html">
                         <i class="fa fa-check"></i>
                         
                             <b>0.2.</b>
@@ -106,7 +104,7 @@
         <li class="chapter " data-level="1" data-path="arm11_mpcore/README.html">
             
                 
-                    <a href="./arm11_mpcore/README.html">
+                    <a href="../arm11_mpcore/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -123,7 +121,7 @@
         <li class="chapter " data-level="1.1" data-path="registers.html">
             
                 
-                    <a href="./registers.html">
+                    <a href="../registers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -139,7 +137,7 @@
         <li class="chapter " data-level="1.2" data-path="privilege_modes.html">
             
                 
-                    <a href="./privilege_modes.html">
+                    <a href="../privilege_modes.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -152,10 +150,10 @@
         </li>
     
         
-        <li class="chapter active" data-level="1.3" data-path="apsr_and_cpsr_flags.html">
+        <li class="chapter " data-level="1.3" data-path="apsr_and_cpsr_flags.html">
             
                 
-                    <a href="./apsr_and_cpsr_flags.html">
+                    <a href="../apsr_and_cpsr_flags.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.</b>
@@ -172,7 +170,7 @@
         <li class="chapter " data-level="1.3.1" data-path="the_apsr,_cpsr,_and_the_difference_between_them.html">
             
                 
-                    <a href="./the_apsr,_cpsr,_and_the_difference_between_them.html">
+                    <a href="../the_apsr,_cpsr,_and_the_difference_between_them.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.1.</b>
@@ -193,7 +191,7 @@
         <li class="chapter " data-level="1.4" data-path="vfp/README.html">
             
                 
-                    <a href="./vfp/README.html">
+                    <a href="../vfp/README.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.</b>
@@ -210,7 +208,7 @@
         <li class="chapter " data-level="1.4.1" data-path="vfp/vfp_registers.html">
             
                 
-                    <a href="./vfp/vfp_registers.html">
+                    <a href="../vfp/vfp_registers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.1.</b>
@@ -227,7 +225,7 @@
         <li class="chapter " data-level="1.4.1.1" data-path="vfp/vfp_system_registers.html">
             
                 
-                    <a href="./vfp/vfp_system_registers.html">
+                    <a href="../vfp/vfp_system_registers.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.1.1.</b>
@@ -244,7 +242,7 @@
         <li class="chapter " data-level="1.4.1.1.1" data-path="vfp/fpsid.html">
             
                 
-                    <a href="./vfp/fpsid.html">
+                    <a href="../vfp/fpsid.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.1.1.1.</b>
@@ -260,7 +258,7 @@
         <li class="chapter " data-level="1.4.1.1.2" data-path="vfp/fpscr.html">
             
                 
-                    <a href="./vfp/fpscr.html">
+                    <a href="../vfp/fpscr.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.1.1.2.</b>
@@ -286,7 +284,7 @@
         <li class="chapter " data-level="1.4.2" data-path="vfp/enabling_flush-to-zero_mode.html">
             
                 
-                    <a href="./vfp/enabling_flush-to-zero_mode.html">
+                    <a href="../vfp/enabling_flush-to-zero_mode.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.2.</b>
@@ -302,12 +300,104 @@
         <li class="chapter " data-level="1.4.3" data-path="vfp/default_nan.html">
             
                 
-                    <a href="./vfp/default_nan.html">
+                    <a href="../vfp/default_nan.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.4.3.</b>
                         
                          Default NaN Mode
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="arm946e-s/README.html">
+            
+                
+                    <a href="../arm946e-s/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         ARM946E-S
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="arm946e-s/cp15.html">
+            
+                
+                    <a href="../arm946e-s/cp15.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         CP15
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1.1" data-path="arm946e-s/id_code_register.html">
+            
+                
+                    <a href="../arm946e-s/id_code_register.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                         ID Code Register
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.1.2" data-path="arm946e-s/cache_type_register.html">
+            
+                
+                    <a href="../arm946e-s/cache_type_register.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                         Cache Type Register
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="2.1.3" data-path="arm946e-s/tightly-coupled_memory_size_register.html">
+            
+                
+                    <a href="../arm946e-s/tightly-coupled_memory_size_register.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                         Tightly-coupled Memory Size Register
                     </a>
                 
             
@@ -342,7 +432,7 @@
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     
-    <a href="./GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
     
     <div id="font-settings-wrapper" class="dropdown pull-left">
         <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
@@ -407,7 +497,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Nintendo 3DS ARM Documentation</a>
+        <a href="../" >Nintendo 3DS ARM Documentation</a>
     </h1>
 </div>
 
@@ -415,163 +505,71 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_135">
+                    <section class="normal" id="section-gitbook_2037">
                     
-                        <h1 id="apsr-and-cpsr-flags">APSR and CPSR Flags</h1>
-<p>The CPSR (which contains the APSR):</p>
-<table>
-<thead>
-<tr>
-<th>31</th>
-<th>30</th>
-<th>29</th>
-<th>28</th>
-<th>27</th>
-<th style="text-align:center">26 - 25</th>
-<th>24</th>
-<th style="text-align:center">23 - 20</th>
-<th>19 - 16</th>
-<th style="text-align:center">15 - 10</th>
-<th>9</th>
-<th>8</th>
-<th>7</th>
-<th>6</th>
-<th>5</th>
-<th style="text-align:center">4 - 0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>N</td>
-<td>Z</td>
-<td>C</td>
-<td>V</td>
-<td>Q</td>
-<td style="text-align:center">RAZ</td>
-<td>J</td>
-<td style="text-align:center">Reserved/UNK/SBZP</td>
-<td>GE</td>
-<td style="text-align:center">RAZ</td>
-<td>E</td>
-<td>A</td>
-<td>I</td>
-<td>F</td>
-<td>T</td>
-<td style="text-align:center">M[4:0]</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<table>
-<thead>
-<tr>
-<th>Flag</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>N (Negative)</td>
-<td>Set if the result of a data processing instruction was negative</td>
-</tr>
-<tr>
-<td>Z (Zero)</td>
-<td>Set if the result of an instruction operation is zero</td>
-</tr>
-<tr>
-<td>C (Carry)</td>
-<td>Set if the result of an unsigned operation overflows the 32-bit result register</td>
-</tr>
-<tr>
-<td>V (Overflow)</td>
-<td>Same as the carry flag, but for signed operations</td>
-</tr>
-<tr>
-<td>Q (Saturation)</td>
-<td>Set if saturation occurs during execution of a saturation instruction. This flag is sticky; it must be explicitly cleared by an MSR instruction.</td>
-</tr>
-<tr>
-<td>J (Jazelle)</td>
-<td>Set when the CPU is in Jazelle mode</td>
-</tr>
-<tr>
-<td>GE (Greater than or Equal)</td>
-<td>Used by the SEL instruction for byte selection</td>
-</tr>
-<tr>
-<td>E (Endian)</td>
-<td>Controls the endianness for load/store instructions. When cleared, load/store instructions operate in little-endian. When set, load/store instructions operate in big endian.</td>
-</tr>
-<tr>
-<td>A (Abort)</td>
-<td>Controls whether or not imprecise data aborts are disabled.</td>
-</tr>
-<tr>
-<td>I (IRQ)</td>
-<td>Controls whether or not IRQ interrupts are disabled.</td>
-</tr>
-<tr>
-<td>F (FIQ)</td>
-<td>Controls whether or not FIQ interrupts are disabled.</td>
-</tr>
-<tr>
-<td>T (Thumb)</td>
-<td>Indicates if the processor is in Thumb mode. If set, Thumb mode is active. If cleared, Thumb mode is not active.</td>
-</tr>
-<tr>
-<td>M (Mode)</td>
-<td>Indicates the current processor mode. See table below</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<p>This table shows what processor modes correspond to mode bit configurations.</p>
-<table>
-<thead>
-<tr>
-<th>Bits</th>
-<th>Mode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10000</td>
-<td>User</td>
-</tr>
-<tr>
-<td>10001</td>
-<td>FIQ</td>
-</tr>
-<tr>
-<td>10010</td>
-<td>IRQ</td>
-</tr>
-<tr>
-<td>10011</td>
-<td>Supervisor</td>
-</tr>
-<tr>
-<td>10111</td>
-<td>Abort</td>
-</tr>
-<tr>
-<td>11011</td>
-<td>Undefined</td>
-</tr>
-<tr>
-<td>11111</td>
-<td>System</td>
-</tr>
-</tbody>
-</table>
-<h3 id="notes">Notes</h3>
-<hr>
+                        <h1 id="tightly-coupled-memory-size-register">Tightly-coupled Memory Size Register</h1>
 <ul>
-<li>Despite the ARM11 MPCore in the 3DS having the Jazelle bit, the 3DS doesn&#39;t actually support Jazelle.<ul>
-<li><strong>However</strong>, it <em>does</em> support the instruction that attempts to enter Jazelle mode (BXJ). Attempts to use it will make it function like a BX instruction.</li>
+<li>Read only</li>
+<li>Contains information regarding the data and instruction tightly-coupled memory (TCM)</li>
+<li>Accessible only in privileged modes</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Register Bits</th>
+<th>Meaning</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31:22</td>
+<td>Reserved</td>
+<td>b0000000000</td>
+</tr>
+<tr>
+<td>21:18</td>
+<td>Data TCM Size</td>
+<td>5 (16KB)</td>
+</tr>
+<tr>
+<td>17:15</td>
+<td>Reserved</td>
+<td>b000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Data TCM Absent</td>
+<td>0</td>
+</tr>
+<tr>
+<td>13:10</td>
+<td>Reserved</td>
+<td>b0000</td>
+</tr>
+<tr>
+<td>9:6</td>
+<td>Instruction TCM Size</td>
+<td>6 (32KB)</td>
+</tr>
+<tr>
+<td>5:3</td>
+<td>Reserved</td>
+<td>b000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Instruction TCM Absent</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1:0</td>
+<td>Reserved</td>
+<td>b00</td>
+</tr>
+</tbody>
+</table>
+<p>This register can be accessed via <code>MRC p15, 0, Rd, c0, c0, 2</code>.</p>
 
                     
                     </section>
@@ -582,23 +580,21 @@
         </div>
 
         
-        <a href="./privilege_modes.html" class="navigation navigation-prev " aria-label="Previous page: Privilege Modes"><i class="fa fa-angle-left"></i></a>
+        <a href="../arm946e-s/cache_type_register.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Cache Type Register"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="./the_apsr,_cpsr,_and_the_difference_between_them.html" class="navigation navigation-next " aria-label="Next page: The APSR, CPSR, SPSR, and the Difference Between Them"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
     
     <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>About the 3DS CPU(s) | Nintendo 3DS ARM Documentation</title>
+        <title>Privilege Modes | Nintendo 3DS ARM Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="./terminology.html" />
+    <link rel="next" href="./apsr_and_cpsr_flags.html" />
     
     
-    <link rel="prev" href="./index.html" />
+    <link rel="prev" href="./registers.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book"  data-level="0.1" data-basepath="." data-revision="1431559689026">
+    <div class="book"  data-level="1.2" data-basepath="." data-revision="1431559689026">
     
 
 <div class="book-summary">
@@ -66,7 +66,7 @@
                 
     
         
-        <li class="chapter active" data-level="0.1" data-path="about_the_3ds.html">
+        <li class="chapter " data-level="0.1" data-path="about_the_3ds.html">
             
                 
                     <a href="./about_the_3ds.html">
@@ -136,7 +136,7 @@
         </li>
     
         
-        <li class="chapter " data-level="1.2" data-path="privilege_modes.html">
+        <li class="chapter active" data-level="1.2" data-path="privilege_modes.html">
             
                 
                     <a href="./privilege_modes.html">
@@ -507,20 +507,89 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2030">
+                    <section class="normal" id="section-gitbook_2038">
                     
-                        <h1 id="about-the-3ds-cpus">About the 3DS CPU(s)</h1>
-<ul>
-<li>The 3DS has two processors in it, an ARM11 processor, and an ARM9 processor.<ul>
-<li>ARM11 MPCore 2x &amp; 2x VFPv2 Co-Processor</li>
-<li>ARM946</li>
-</ul>
-</li>
-</ul>
-<p>The ARM11 MPCore processor is a dual-core processor, which has it&#39;s cores divided in terms of accessibility and purpose. One core is dedicated solely for system software while the other core is used for applications (e.g. Games and general software); this is the core that applications you create will run on. These cores are commonly referred to in the homebrew community as the <em>syscore</em> and <em>appcore</em>.</p>
-<p>The ARM9 processor only ever has one process running, which is named Process9. Process9 interacts with the kernel and handles commands from the ARM11 MPCore processor.</p>
-<p>Since the MPCore only has VFPv2, this means it doesn&#39;t have NEON or any of the fancy floating-point operations that are possible in newer processor models, so this makes things (sort of) simple for us. I&#39;ll explain in detail in the respective sections.</p>
-<p>When building applications for the 3DS. It is best to pass <code>-march=armv6k</code> in your Makefile.</p>
+                        <h1 id="privilege-modes">Privilege Modes</h1>
+<p>ARM processors have privilege modes which allow preventing certain operations by an executing process. The privilege modes the CPUs in the 3DS have are the following:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User</td>
+<td>Unprivileged mode. Applications normally run in this mode</td>
+</tr>
+<tr>
+<td>System</td>
+<td>Runs applications with elevated privileges. System mode can be viewed as a cross between user and supervisor modes. It provides the privileges of supervisor mode, but shares registers with user mode.</td>
+</tr>
+<tr>
+<td>FIQ</td>
+<td>ARM processors have two types of interrupt types: regular interrupts, and fast interrupts (FIQs). The only difference between fast interrupts and normal interrupts is that fast interrupts can interrupt regular interrupts (kind of a mouthful to say). Since ARM processors do not have non-maskable interrupts (NMIs), FIQs can be disabled when necessary. Interrupts that need to complete very quickly will use this mode.</td>
+</tr>
+<tr>
+<td>IRQ</td>
+<td>Regular interrupt mode. Interrupts that are not time-critical (not requiring clock timing accuracy) will normally use this mode.</td>
+</tr>
+<tr>
+<td>Supervisor</td>
+<td>Privileged mode for the operating system.</td>
+</tr>
+<tr>
+<td>Abort</td>
+<td>This mode is entered whenever an abort exception occurs.</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>This mode is entered whenever an undefined instruction exception is signalled. Normally whenever an undefined instruction exception is encountered, the ARM processor will wait and see if any coprocessors are able to handle the instruction. If not, then the undefined instruction vector is taken. Some software can actually utilize this form of exception handling to software emulate undefined coprocessor instructions</td>
+</tr>
+</tbody>
+</table>
+<p>On the ARM11 MPCore both cores run in <em>user mode</em>. In user mode, access to certain other registers is not possible (such as a majority of the registers in the CP15 coprocessor). It isn&#39;t possible to explicitly switch to a higher privileged mode from user mode.</p>
+<p>Note that each mode can also have it&#39;s own registers that &#39;shadow&#39; the original core 15 registers. These are known as <em>banked registers</em>. These registers are automatically brought into &#39;view&#39; (possible to read/write to) whenever the processor changes into modes that have these registers.</p>
+<p>Which registers are to be shadowed in a processor mode are different. The table below depicts the registers shadowed per mode in the ARM11 MPCore.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Shadowed Registers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User</td>
+<td>No shadowed registers</td>
+</tr>
+<tr>
+<td>System</td>
+<td>Shares registers with user mode</td>
+</tr>
+<tr>
+<td>Supervisor</td>
+<td>SP, LR, CPSR</td>
+</tr>
+<tr>
+<td>Abort</td>
+<td>SP, LR, CPSR</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>SP, LR, CPSR</td>
+</tr>
+<tr>
+<td>IRQ</td>
+<td>SP, LR, CPSR</td>
+</tr>
+<tr>
+<td>FIQ</td>
+<td>R8, R9, R10, R11, R12, SP, LR, CPSR</td>
+</tr>
+</tbody>
+</table>
 
                     
                     </section>
@@ -531,10 +600,10 @@
         </div>
 
         
-        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="./registers.html" class="navigation navigation-prev " aria-label="Previous page: Core Registers"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./terminology.html" class="navigation navigation-next " aria-label="Next page: Terminology"><i class="fa fa-angle-right"></i></a>
+        <a href="./apsr_and_cpsr_flags.html" class="navigation navigation-next " aria-label="Next page: APSR and CPSR Flags"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
